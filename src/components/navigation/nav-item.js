@@ -8,7 +8,7 @@ const NavItem = styled.li`
   text-transform: uppercase;
   min-width: 100px;
   text-align: center;
-  transition: background-color .25s;
+  transition: background-color 0.25s;
 
   :hover {
     background-color: #0aad8d;
@@ -22,9 +22,9 @@ const NavItem = styled.li`
 const navItem = (props) => {
   return (
     <NavItem>
-      <Link {...props}/>
+      <Link {...props} />
     </NavItem>
-  )
-}
+  );
+};
 
-export default navItem
+export default navItem;

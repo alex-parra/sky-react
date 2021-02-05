@@ -35,13 +35,13 @@ const hero = (props) => {
     <>
       <Hero>
         <Wrapper>
-          <Lockup text={dummyText} tag="h1" title="Great IPA"/>
+          <Lockup text={dummyText} tag="h1" title="Great IPA" />
         </Wrapper>
-        
-        <Image url={beer}/>
+
+        <Image url={beer} />
       </Hero>
     </>
-  )
-}
+  );
+};
 
-export default hero
+export default hero;

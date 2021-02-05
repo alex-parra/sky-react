@@ -8,15 +8,15 @@ const FooterWrapper = styled.footer`
   display: block;
   background-color: #050c0e;
   padding: 50px 0;
-`
+`;
 
-const Copyright = styled.div `
+const Copyright = styled.div`
   color: white;
   text-align: center;
   background-color: #182629;
   padding: 20px;
   font-size: 14px;
-`
+`;
 
 const footer = (props) => {
   return (
@@ -26,7 +26,7 @@ const footer = (props) => {
       </FooterWrapper>
       <Copyright>Copyright Foolproof 2019</Copyright>
     </>
-  )
-}
+  );
+};
 
-export default footer
+export default footer;

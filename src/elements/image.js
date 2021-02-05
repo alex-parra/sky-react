@@ -10,14 +10,14 @@ const Image = styled.img`
     width: 100%;
     height: auto;
   }
-`
+`;
 
 const image = (props) => {
   return (
     <>
       <Image src={props.url} />
     </>
-  )
-}
+  );
+};
 
-export default image
+export default image;

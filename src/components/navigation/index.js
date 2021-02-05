@@ -4,14 +4,10 @@ import theme from '../../variables';
 import NavItem from './nav-item';
 import styled from 'styled-components';
 
-import Burger, {BurgerMenu} from './burger';
+import Burger, { BurgerMenu } from './burger';
 import { device } from '../../helpers';
 
-const navData = [
- { home: 'home.link' },
- { beers: 'blog.link' },
- { contact: 'contact.link' },
-];
+const navData = [{ home: 'home.link' }, { beers: 'blog.link' }, { contact: 'contact.link' }];
 
 const NavList = styled.ul`
   color: white;
@@ -26,7 +22,6 @@ const NavWrapper = styled.nav`
   margin-left: auto;
 
   ${BurgerMenu} {
-    
     @media ${device.laptop} {
       display: none;
     }
@@ -42,13 +37,13 @@ const navigation = () => {
             const title = Object.keys(value)[0];
             const url = value[title];
 
-            return <NavItem key={index} title={title} url={url} color={theme.white}/>
+            return <NavItem key={index} title={title} url={url} color={theme.white} />;
           })}
         </NavList>
         <Burger />
       </NavWrapper>
     </>
-  )
-}
+  );
+};
 
-export default navigation
+export default navigation;

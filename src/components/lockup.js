@@ -11,10 +11,10 @@ export const LockupContainer = styled.div`
 const Lockup = (props) => {
   return (
     <LockupContainer>
-      <Title {...props}/>
-      <Paragraph {...props}/>
+      <Title {...props} />
+      <Paragraph {...props} />
     </LockupContainer>
-  )
-}
+  );
+};
 
-export default Lockup
+export default Lockup;

@@ -21,7 +21,7 @@ const ImagContainer = styled.div`
   background-color: #2897b1;
   position: relative;
   margin-top: auto;
-  
+
   img {
     height: 100px;
     width: auto;
@@ -38,21 +38,21 @@ function Beercard(props) {
   const [active, setActive] = useState(false);
 
   const changeLike = () => {
-    setActive(!active)
-  }
+    setActive(!active);
+  };
 
   return (
     <BeerCard>
       <ImagContainer>
         <Like liked={active} />
-        <Image url={props.image}/>
+        <Image url={props.image} />
       </ImagContainer>
 
       <Content>
-        <Lockup text={props.description} tag="h3" title={props.title}/>
+        <Lockup text={props.description} tag="h3" title={props.title} />
       </Content>
     </BeerCard>
-  )
+  );
 }
 
-export default Beercard
+export default Beercard;

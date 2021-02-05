@@ -4,7 +4,7 @@ import theme from '../../variables';
 
 import Navigation from '../navigation/';
 import Logo, { LogoWrapper } from '../logo';
-import Wrapper, {WrapperFrame} from '../layout/wrapper';
+import Wrapper, { WrapperFrame } from '../layout/wrapper';
 
 const Header = styled.header`
   background-color: ${theme.blackTransparent};
@@ -18,7 +18,7 @@ const Header = styled.header`
 
   ${WrapperFrame} {
     display: flex;
-    align-items:  center;
+    align-items: center;
   }
 `;
 
@@ -32,7 +32,7 @@ const header = (props) => {
         </Wrapper>
       </Header>
     </>
-  )
-}
+  );
+};
 
-export default header
+export default header;

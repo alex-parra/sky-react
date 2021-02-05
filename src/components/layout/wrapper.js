@@ -12,8 +12,8 @@ export const WrapperFrame = styled.div`
     width: 90%;
     max-width: 1440px;
   }
-`
+`;
 
-const wrapper = (props) => <WrapperFrame>{props.children}</WrapperFrame>
+const wrapper = (props) => <WrapperFrame>{props.children}</WrapperFrame>;
 
-export default wrapper 
+export default wrapper;
