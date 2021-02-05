@@ -9,16 +9,12 @@ import Header from './components/shared/header';
 import Hero from './components/hero';
 import Section from './components/layout/section';
 import Wrapper from './components/layout/wrapper';
+import Grid from './components/layout/grid';
 
 const MainWrapper = styled.main`
   display: block;
   position: relative;
   width: 100%;
-
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-  }
 `;
 
 function App() {
@@ -50,11 +46,13 @@ function App() {
 
           {!loading && (
             <Wrapper>
-              <div className="grid">
+              <Grid gap="20px">
                 {data.beers.map((item, index) => (
-                  <BeerCard key={index.toString()} image={item.image_url} title={item.name} description={item.brewers_tips} />
+                  <Grid.Col key={index.toString()}>
+                    <BeerCard reverse={true} image={item.image_url} title={item.name} description={item.brewers_tips} />
+                  </Grid.Col>
                 ))}
-              </div>
+              </Grid>
             </Wrapper>
           )}
         </Section>

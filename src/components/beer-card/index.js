@@ -1,26 +1,21 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { device } from '../../helpers';
 import Image from '../../elements/image';
 import Lockup from '../lockup';
 import Like from './like-button';
 
-const BeerCard = styled.div`
-  display: block;
-  margin-bottom: 30px;
-  margin-left: 20px;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: ${(props) => (props.reverse ? 'column-reverse' : 'column')};
   width: 100%;
-
-  @media ${device.laptop} {
-    width: 30%;
-  }
 `;
 
 const ImagContainer = styled.div`
+  flex: 0 0 auto;
   padding: 40px 20px;
   background-color: #2897b1;
   position: relative;
-  margin-top: auto;
 
   img {
     height: 100px;
@@ -31,10 +26,12 @@ const ImagContainer = styled.div`
 `;
 
 const Content = styled.div`
+  flex: 1;
   padding: 20px;
+  border: 1px solid #f3f3f3;
 `;
 
-function Beercard(props) {
+function BeerCard(props) {
   const [active, setActive] = useState(false);
 
   const changeLike = () => {
@@ -42,17 +39,24 @@ function Beercard(props) {
   };
 
   return (
-    <BeerCard>
+    <Wrapper reverse={props.reverse}>
       <ImagContainer>
-        <Like liked={active} />
+        <Like liked={active} action={changeLike} />
         <Image url={props.image} />
       </ImagContainer>
 
       <Content>
         <Lockup text={props.description} tag="h3" title={props.title} />
       </Content>
-    </BeerCard>
+    </Wrapper>
   );
 }
 
-export default Beercard;
+BeerCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  reverse: PropTypes.bool,
+};
+
+export default BeerCard;
